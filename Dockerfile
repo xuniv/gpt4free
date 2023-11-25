@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   gcc \
   build-essential \
   && rm -rf /var/lib/apt/lists/*
-RUN apt install curl git wget -y
+RUN apt-get install curl git wget -y
 
 # clone the latest version
 RUN git clone "https://github.com/xuniv/gpt4free" /app
