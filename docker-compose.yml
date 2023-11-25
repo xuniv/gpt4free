@@ -2,12 +2,7 @@ version: '3'
 
 services:
   gpt4free-api: &gpt4free
-    image: gpt4free:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
-      cache_from:
-        - gpt4free:latest
+    image: ghcr.io/xuniv/gpt4free:main
     ports:
       - '1337:1337'
     command: api
