@@ -2,12 +2,12 @@ version: '3'
 
 services:
   gpt4free-api: &gpt4free
-    image: ghcr.io/xuniv/gpt4free:main
+    image: ghcr.io/xuniv/gpt4free:latest
     ports:
       - '1337:1337'
     command: api
   gpt4free-gui:
     <<: *gpt4free
     ports:
-      - '8080:80'
+      - '8080:8080'
     command: gui
